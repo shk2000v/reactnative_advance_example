@@ -7,3 +7,10 @@ export const HEIGHT = Dimensions.get('screen').height / 896;
 
 // export const PRIMARY = '';
 export const PRIMARY = '#f94c63';
+
+type fontProps = 'EB' | 'B' | 'R' | 'L';
+
+export const FONT = (bold: fontProps) => {
+  const fontFamily = `NanumSquare${bold}`;
+  return fontFamily;
+};
