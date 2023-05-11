@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import Text from './src/atoms/Text/Text';
 import { FONT } from './src/constants';
+import Navigation from './src/navigation/navigation';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -18,50 +19,7 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-      // barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-      // barStyle={'default'}
-      // backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}
-        contentContainerStyle={{ height: '100%' }}
-      >
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-            flex: 1,
-            height: '100%',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <Text style={{ color: !isDarkMode ? Colors.black : Colors.white }}>
-            Test
-          </Text>
-          <Text
-            style={{
-              color: !isDarkMode ? Colors.black : Colors.white,
-              fontFamily: FONT('B'),
-            }}
-          >
-            Test
-          </Text>
-          <Text
-            style={{
-              color: !isDarkMode ? Colors.black : Colors.white,
-              fontFamily: FONT('EB'),
-            }}
-          >
-            Test
-          </Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+  return <Navigation />;
 }
 
 const styles = StyleSheet.create({
