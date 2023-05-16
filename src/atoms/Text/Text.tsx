@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Platform, Text as RNText, StyleSheet, TextProps } from 'react-native';
-import { FONT } from '../../constants';
+import { FONT, WIDTH } from '../../constants';
 
 const Text: FC<TextProps> = ({ style, ...props }) => {
   return <RNText style={[styles.default, style]} {...props} />;
@@ -10,12 +10,11 @@ export default Text;
 
 const styles = StyleSheet.create({
   default: {
-    // fontFamily: FONT('R'),
     includeFontPadding: false,
     textAlignVertical: 'center',
     fontFamily: FONT('R'),
     fontStyle: Platform.OS === 'android' ? 'normal' : undefined,
-    fontSize: 22,
+    fontSize: 22 * WIDTH,
   },
 });
 
