@@ -22,9 +22,9 @@ const Start: FC<RootStackScreenProps<'Start'>> = ({ navigation, route }) => {
           pressableStyle={[styles.button]}
           onPress={() => navigation.navigate('Home')}
         >
-          AtomComponents
+          {'AtomComponents'}
         </PressableButton>
-        <PressableButton>asda</PressableButton>
+        <PressableButton pressableStyle={[styles.button]}>asda</PressableButton>
       </ScrollView>
     </SafeAreaView>
   );
