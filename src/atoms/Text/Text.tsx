@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Platform, Text as RNText, StyleSheet, TextProps } from 'react-native';
-import { FONT, WIDTH } from '../../constants';
+import { FONT, WIDTH, fontProps } from '../../constants';
 
 const Text: FC<TextProps> = ({ style, ...props }) => {
   return <RNText style={[styles.default, style]} {...props} />;
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
 type dStyleProps = {
   param1: number | string;
   param2: number | string;
+  font: fontProps;
 };
 const dstyle = ({ param1, param2 }: dStyleProps) =>
   StyleSheet.create({

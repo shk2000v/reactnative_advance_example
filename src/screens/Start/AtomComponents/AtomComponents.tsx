@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { SafeAreaView, View } from 'react-native';
-import { RootStackScreenProps } from '../../../navigation/RootStackNavigator/types';
-import Text from '../../../atoms/Text/Text';
+import Text from 'src/atoms/Text/Text';
+import { RootStackScreenProps } from 'src/navigation/RootStackNavigator/types';
 
 const AtomComponents: FC<RootStackScreenProps<'AtomComponents'>> = ({
   navigation,
