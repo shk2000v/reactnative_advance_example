@@ -9,6 +9,8 @@ export type ScrollY = { scrollY?: Animated.Value };
  */
 export type StartStackParamList = {
   Start: undefined | { where: keyof RootStackParamList };
+  StatusManage: undefined;
+  AtomComponents: undefined;
 };
 
 export type HomeStackParamList = {

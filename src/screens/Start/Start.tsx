@@ -7,24 +7,33 @@ import { WIDTH } from '../../constants';
 
 const Start: FC<RootStackScreenProps<'Start'>> = ({ navigation, route }) => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ backgroundColor: '#fff', flex: 1 }}>
       <ScrollView
-        style={{ height: '100%' }}
+        style={{ backgroundColor: '#fff' }}
         contentContainerStyle={{
-          justifyContent: 'center',
-          alignItems: 'center',
+          backgroundColor: '#fff',
         }}
       >
         <View style={[styles.default]}>
           <Text style={[styles.text]}>Start Page</Text>
         </View>
-        <PressableButton
-          pressableStyle={[styles.button]}
-          onPress={() => navigation.navigate('Home')}
-        >
-          {'AtomComponents'}
-        </PressableButton>
-        <PressableButton pressableStyle={[styles.button]}>asda</PressableButton>
+        <View style={{ alignItems: 'center' }}>
+          <PressableButton
+            pressableStyle={[styles.button]}
+            onPress={() => navigation.navigate('AtomComponents')}
+          >
+            {'AtomComponents'}
+          </PressableButton>
+          <PressableButton
+            pressableStyle={[styles.button]}
+            onPress={() => navigation.navigate('StatusManage')}
+          >
+            {'상태 관리'}
+          </PressableButton>
+          <PressableButton pressableStyle={[styles.button]}>
+            asda
+          </PressableButton>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
