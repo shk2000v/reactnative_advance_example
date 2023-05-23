@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import { SafeAreaView, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import Text from 'src/atoms/Text/Text';
+import { WIDTH } from 'src/constants';
 import { RootStackScreenProps } from 'src/navigation/RootStackNavigator/types';
 
 const AtomComponents: FC<RootStackScreenProps<'AtomComponents'>> = ({
@@ -19,3 +20,11 @@ const AtomComponents: FC<RootStackScreenProps<'AtomComponents'>> = ({
 };
 
 export default AtomComponents;
+
+const Wrapper = () => {};
+
+const styles = StyleSheet.create({
+  wrapper: {
+    padding: 16 * WIDTH,
+  },
+});
