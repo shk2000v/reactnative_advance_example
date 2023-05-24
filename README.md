@@ -5,27 +5,27 @@
 # Src 디렉토리 구조
 
 ```
-|-api														> api 관련 파일들(axios설정 및 reactQuery 설정)
-	|- index.tsx    							> axios의 기본 설정 등의 설정
-	|- user         							> 호출하고자 하는 api의 endpoint에 맞추어 네이밍
+|-api 					> api 관련 파일들(axios설정 및 reactQuery 설정)
+	|- index.tsx		> axios의 기본 설정 등의 설정
+	|- user				> 호출하고자 하는 api의 endpoint에 맞추어 네이밍
 	  |- user.ts
 	  |- types.ts
 	|- ...
-|-assets												> 정적 요소들(폰트, 아이콘, 이미지)
+|-assets				> 정적 요소들(폰트, 아이콘, 이미지)
 	|-fonts
 	|-icons
 	|-images
-|-constants											> 상수 값
-	|-index.ts										> 화면비율 및 폰트값 등
+|-constants				> 상수 값
+	|-index.ts			> 화면비율 및 폰트값 등
   	|- ...
-|-utils													> 주로 사용하는 함수 및 설정 함수
-	|- ...		
-|-atoms													> atom-design 원자
+|-utils					> 주로 사용하는 함수 및 설정 함수
+	|- ...
+|-atoms					> atom-design 원자
 	|-Button
     |-Button.tsx
 	|-Text
   	|-Text.tsx
-|-components										> atom-design 분자 + 유기체 (원자들로 구성 / 재사용이 높은 컴포넌트들 / 도메인별로 폴더 구분하지 않음)
+|-components			> atom-design 분자 + 유기체 (원자들로 구성 / 재사용이 높은 컴포넌트들 / 도메인별로 폴더 구분하지 않음)
 	|-card
   	|-Card.tsx
   	|-types.ts
@@ -39,10 +39,10 @@
   |-RootStackNavigator
     |-RootStackNavigator.tsx    > 각 페이지별 stack
     |-types.ts                  > page stack의 타입 설정
-|-hooks													> 비즈니스 로직 중 hook들
-	|-useAddLog.js								> 도메인에 상관없이 개별 hook 파일들
-|-screens												> 페이지(화면) 최상위 디렉토리 
-  |- Home												> 해당 화면의 이름
+|-hooks							> 비즈니스 로직 중 hook들
+	|-useAddLog.js				> 도메인에 상관없이 개별 hook 파일들
+|-screens						> 페이지(화면) 최상위 디렉토리
+  |- Home						> 해당 화면의 이름
     |- Home.tsx
   |- ...
 ```
