@@ -5,8 +5,8 @@
 # Src 디렉토리 구조
 
 ```
-|-api 					> api 관련 파일들(axios설정 및 reactQuery 설정)
-	|- index.tsx		> axios의 기본 설정 등의 설정
+|-api 				> api 관련 파일들(axios설정 및 reactQuery 설정)
+	|- index.tsx			> axios의 기본 설정 등의 설정
 	|- user				> 호출하고자 하는 api의 endpoint에 맞추어 네이밍
 	  |- user.ts
 	  |- types.ts
@@ -39,10 +39,10 @@
   |-RootStackNavigator
     |-RootStackNavigator.tsx    > 각 페이지별 stack
     |-types.ts                  > page stack의 타입 설정
-|-hooks							> 비즈니스 로직 중 hook들
-	|-useAddLog.js				> 도메인에 상관없이 개별 hook 파일들
-|-screens						> 페이지(화면) 최상위 디렉토리
-  |- Home						> 해당 화면의 이름
+|-hooks				> 비즈니스 로직 중 hook들
+	|-useAddLog.js		> 도메인에 상관없이 개별 hook 파일들
+|-screens			> 페이지(화면) 최상위 디렉토리
+  |- Home			> 해당 화면의 이름
     |- Home.tsx
   |- ...
 ```
