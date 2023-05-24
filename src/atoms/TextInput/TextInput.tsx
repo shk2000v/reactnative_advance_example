@@ -30,7 +30,8 @@ const TextInput = forwardRef<RNTextInput, TextInputProps>(
     );
   }
 );
-export default memo(TextInput);
+// export default memo(TextInput);
+export default TextInput;
 
 const styles = StyleSheet.create({
   default: {
