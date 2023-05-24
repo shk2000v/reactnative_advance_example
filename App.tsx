@@ -1,16 +1,9 @@
 import React from 'react';
-import { Colors, Header } from 'react-native/Libraries/NewAppScreen';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  View,
-  useColorScheme,
-} from 'react-native';
-import Text from './src/atoms/Text/Text';
-import { FONT } from './src/constants';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { StyleSheet, useColorScheme } from 'react-native';
 import Navigation from './src/navigation/navigation';
+import { Provider } from 'react-redux';
+import { store } from './src/store/store';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -19,7 +12,11 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return <Navigation />;
+  return (
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
+  );
 }
 
 const styles = StyleSheet.create({
