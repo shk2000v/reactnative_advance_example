@@ -4,6 +4,7 @@ import { StyleSheet, useColorScheme } from 'react-native';
 import Navigation from './src/navigation/navigation';
 import { Provider } from 'react-redux';
 import { store } from './src/store/store';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -11,11 +12,15 @@ function App(): JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+  
+  const queryClient = new QueryClient()
 
   return (
-    <Provider store={store}>
-      <Navigation />
-    </Provider>
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
+        <Navigation />
+      </Provider>
+    </QueryClientProvider>
   );
 }
 
