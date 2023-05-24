@@ -16,6 +16,7 @@
     "@react-navigation/native-stack": "^6.9.1",
     "@reduxjs/toolkit": "^1.9.5",
     "@shopify/flash-list": "^1.4.3",
+    "axios": "^1.4.0",
     "react": "18.2.0",
     "react-native": "0.71.7",
     "react-native-fast-image": "^8.6.3",
