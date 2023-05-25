@@ -30,8 +30,11 @@ const Start: FC<RootStackScreenProps<'Start'>> = ({ navigation, route }) => {
           >
             {'상태 관리'}
           </PressableButton>
-          <PressableButton pressableStyle={[styles.button]}>
-            asda
+          <PressableButton
+            pressableStyle={[styles.button]}
+            onPress={() => navigation.navigate('ApiTest')}
+          >
+            ApiTest
           </PressableButton>
         </View>
       </ScrollView>

@@ -11,6 +11,7 @@ export type StartStackParamList = {
   Start: undefined | { where: keyof RootStackParamList };
   StatusManage: undefined;
   AtomComponents: undefined;
+  ApiTest: undefined;
 };
 
 export type HomeStackParamList = {
