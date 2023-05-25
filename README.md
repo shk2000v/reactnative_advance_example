@@ -2,6 +2,14 @@
 
 해당 앱은 ReactNative를 사용하면서 주요 기술과 코드 스타일 등을 기록하는 곳 입니다.
 
+# 적용한 부분
+- Custom UI - Text, TextInput, Row 
+- async-storage 예시 적용
+- Redux-toolkit 예시 적용
+- react-native-navigation의 환경설정과 screen 적용
+- Custom Hook 사용법
+- Axios 설정 & react-query(v3) 사용 예시 적용
+
 # Src 디렉토리 구조
 
 ```
