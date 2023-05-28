@@ -12,7 +12,6 @@ export const PressableButton = ({
 }: Props) => {
   return (
     <Pressable {...buttonProps} style={[styles.defaultButton, pressableStyle]}>
-      {/* <Text style={[styles.defaultText, textStyles]}>{title}</Text> */}
       <Text style={[styles.defaultText, textStyles]}>{children}</Text>
     </Pressable>
   );

@@ -2,8 +2,18 @@ import { FC } from 'react';
 import { Platform, Text as RNText, StyleSheet, TextProps } from 'react-native';
 import { FONT, WIDTH, fontProps } from '../../constants';
 
-const Text: FC<TextProps> = ({ style, ...props }) => {
-  return <RNText style={[styles.default, style]} {...props} />;
+type SizeProps = {
+  size?: number;
+};
+type RNTextProps = TextProps & SizeProps;
+
+const Text: FC<RNTextProps> = ({ style, size = 22, ...props }) => {
+  return (
+    <RNText
+      style={[styles.default, dstyle({ size }).number, style]}
+      {...props}
+    />
+  );
 };
 
 export default Text;
@@ -19,14 +29,17 @@ const styles = StyleSheet.create({
 });
 
 type dStyleProps = {
-  param1: number | string;
-  param2: number | string;
-  font: fontProps;
+  param1?: number | string;
+  param2?: number | string;
+  size: number;
 };
-const dstyle = ({ param1, param2 }: dStyleProps) =>
+const dstyle = ({ param1, param2, size }: dStyleProps) =>
   StyleSheet.create({
     default: {
       width: param1,
       height: param2,
+    },
+    number: {
+      fontSize: size * WIDTH,
     },
   });

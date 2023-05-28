@@ -1,8 +1,5 @@
 import { FC, useEffect, useState } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
-import { add, decrement, increment } from 'src/store/reducer/counter';
-import { RootState } from 'src/store/store';
 import Text from 'src/atoms/Text/Text';
 import { RootStackScreenProps } from 'src/navigation/RootStackNavigator/types';
 import { WIDTH } from 'src/constants';
@@ -26,7 +23,6 @@ const StatusManage: FC<RootStackScreenProps<'StatusManage'>> = ({
 
   const [asyncValue, setAsyncValue] = useState('');
   const [stoageValue, setStoageValue] = useState('');
-
   const onPressSetAsyncStorage = async () => {
     try {
       await setItem('key', asyncValue);
@@ -90,7 +86,9 @@ const StatusManage: FC<RootStackScreenProps<'StatusManage'>> = ({
             <PressableButton
               pressableStyle={{ width: 100 * WIDTH, marginLeft: 10 }}
               onPress={() => onPressSetAsyncStorage()}
-            >{`'key' 값 등록`}</PressableButton>
+            >
+              {`'key' 값 등록`}
+            </PressableButton>
           </Row>
         </View>
         <View style={[styles.wrap]}>
