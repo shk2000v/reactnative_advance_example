@@ -5,6 +5,7 @@ import Home from '../../screens/Home/Home';
 import StatusManage from '../../screens/Start/StatusManage/StatusManage';
 import AtomComponents from '../../screens/Start/AtomComponents/AtomComponents';
 import ApiTest from 'src/screens/Start/ApiTest/ApiTest';
+import UserDetail from 'src/screens/Start/ApiTest/UserDetail/UserDetail';
 
 export const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -31,6 +32,11 @@ const RootStackNavigator = () => {
       <Stack.Screen
         name="ApiTest"
         component={ApiTest}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="UserDetail"
+        component={UserDetail}
         options={{ headerShown: false }}
       />
 

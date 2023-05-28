@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { useQuery } from 'react-query';
 import { getUsers } from 'src/api/JsonKorea/JsonKorea';
+import { PressableButton } from 'src/atoms/Button/Button';
 import Text from 'src/atoms/Text/Text';
 import { WIDTH } from 'src/constants';
 import { RootStackScreenProps } from 'src/navigation/RootStackNavigator/types';
@@ -33,7 +34,9 @@ const ApiTest: FC<RootStackScreenProps<'ApiTest'>> = ({
           return (
             <View key={index}>
               <Text size={14} style={styles.mv10}>{`[아이디] : ${v.id}`}</Text>
-              <Text size={14} style={styles.mv10}>{`[이름] : ${v.name}`}</Text>
+              <PressableButton
+                pressableStyle={{ width: 150 * WIDTH }}
+              >{`${v.name} 유저 정보`}</PressableButton>
             </View>
           );
         })}
